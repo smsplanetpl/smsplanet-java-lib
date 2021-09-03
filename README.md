@@ -1,6 +1,6 @@
 # SMSPlanet JAVA API
 
-JAR available [here](https://www.jetbrains.com/idea/download/).
+JAR available [here](https://smsplanet.pl/wtyczki/smsplanet-java-lib-1.0.jar) or in 'build' repository folder.
 
 ## How to use
 
@@ -15,13 +15,13 @@ public class Main {
 
     public static void main(String[] args) { 
 		
-		final String key = "YourAPIKey";
+	final String key = "YourAPIKey";
         final String password = "YourApiPassword";
         final String from = "TEST";
         final String msg = "Sample text.";
         final String[] to = new String[] {"505111222"};
 
-		SmsplanetRequest request = SmsplanetRequest.sendSMS(key, password, from, msg, to);
+	SmsplanetRequest request = SmsplanetRequest.sendSMS(key, password, from, msg, to);
         try {
             SmsplanetResponse response = request.execute();
             if (response.getErrorCode() == 0) {
